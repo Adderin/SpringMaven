@@ -11,4 +11,9 @@
           class="ru.adel.springmaven.ClassicalMusic">
     </bean>
 
+    <bean id="musicPlayer"
+            class = "ru.adel.springmaven.MusicPlayer">
+            <constructor-arg ref = "musicBean"/>
+    </bean>
+
 </beans>
