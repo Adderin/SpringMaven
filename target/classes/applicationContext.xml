@@ -9,14 +9,25 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="musicBean"
+    <bean id="musicListBean1"
           class="ru.adel.springmaven.ClassicalMusic">
+    </bean>
+    <bean id="musicListBean2"
+          class="ru.adel.springmaven.JazzMusic">
+    </bean>
+    <bean id="musicListBean3"
+          class="ru.adel.springmaven.RockMusic">
     </bean>
 
     <bean id="musicPlayer"
             class = "ru.adel.springmaven.MusicPlayer">
-            <property name="music" ref = "musicBean"/>
-        
+            <property name="musicList">
+                     <list>
+                         <ref bean = "musicListBean1"/>
+                         <ref bean = "musicListBean2"/>
+                         <ref bean = "musicListBean3"/>
+                     </list>
+            </property>
             <property name="name" value = "${musicPlayer.name}"/>
             <property name="volume" value = "${musicPlayer.volume}"/>
 
