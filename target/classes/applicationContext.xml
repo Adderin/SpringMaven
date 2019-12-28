@@ -12,12 +12,13 @@
     <bean id="musicBean"
           class="ru.adel.springmaven.ClassicalMusic"
           init-method="doMyInit"
-          destroy-method="doMyDestroy">
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
-<!--    <bean id="musicListBean1"-->
-<!--          class="ru.adel.springmaven.ClassicalMusic">-->
-<!--    </bean>-->
+    <!--    <bean id="musicListBean1"-->
+    <!--          class="ru.adel.springmaven.ClassicalMusic">-->
+    <!--    </bean>-->
 
     <!--    <bean id="musicListBean2"-->
     <!--          class="ru.adel.springmaven.JazzMusic">-->
