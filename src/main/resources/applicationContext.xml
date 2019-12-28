@@ -19,7 +19,8 @@
           class="ru.adel.springmaven.RockMusic">
     </bean>
     <bean id="musicPlayer"
-          class="ru.adel.springmaven.MusicPlayer">
+          class="ru.adel.springmaven.MusicPlayer"
+          scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="musicListBean1"/>
