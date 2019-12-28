@@ -2,7 +2,7 @@ package ru.adel.springmaven;
 
 public class RockMusic implements Music {
     @Override
-    public String getSong(){
+    public String getSong() {
         return "Master of Puppets";
     }
 
