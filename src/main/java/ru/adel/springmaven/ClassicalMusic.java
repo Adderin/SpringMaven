@@ -1,5 +1,8 @@
 package ru.adel.springmaven;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music {
     private ClassicalMusic() { }    //this private method implies us to use factory method
 
