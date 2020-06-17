@@ -7,40 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="ru.adel.springmaven"/>
-    
-<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
-
-<!--    <bean id="musicBean"-->
-<!--          class="ru.adel.springmaven.ClassicalMusic"-->
-<!--          init-method="doMyInit"-->
-<!--          destroy-method="doMyDestroy"-->
-<!--          factory-method="getClassicalMusic">-->
-<!--    </bean>-->
-
-    <!--    <bean id="musicListBean1"-->
-    <!--          class="ru.adel.springmaven.ClassicalMusic">-->
-    <!--    </bean>-->
-
-    <!--    <bean id="musicListBean2"-->
-    <!--          class="ru.adel.springmaven.JazzMusic">-->
-    <!--    </bean>-->
-    <!--    <bean id="musicListBean3"-->
-    <!--          class="ru.adel.springmaven.RockMusic">-->
-    <!--    </bean>-->
-
-    <!--    <bean id="musicPlayer"-->
-    <!--          class="ru.adel.springmaven.MusicPlayer"-->
-    <!--          scope="prototype">-->
-    <!--        <property name="musicList">-->
-    <!--            <list>-->
-    <!--                <ref bean="musicListBean1"/>-->
-    <!--                <ref bean="musicListBean2"/>-->
-    <!--                <ref bean="musicListBean3"/>-->
-    <!--            </list>-->
-    <!--        </property>-->
-    <!--        <property name="name" value="${musicPlayer.name}"/>-->
-    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
-    <!--    </bean>-->
+    <context:component-scan base-package="cz.example"/>
 
 </beans>
