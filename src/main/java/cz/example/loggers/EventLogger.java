@@ -1,5 +1,9 @@
 package cz.example.loggers;
 
+import cz.example.util.Event;
+
 public interface EventLogger {
-    void logEvent(String msg);
+    void logEvent(Event event);
+
+    String getName();
 }

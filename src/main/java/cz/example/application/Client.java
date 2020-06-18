@@ -1,4 +1,4 @@
-package cz.example.client;
+package cz.example.application;
 
 public class Client {
     private String id;

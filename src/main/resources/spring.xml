@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="client" class="cz.example.client.Client">
+    <context:annotation-config/>
+
+    <bean id="client" class="cz.example.application.Client">
         <constructor-arg value="1"/>
         <constructor-arg value="John Smith"/>
     </bean>
 
     <bean id="eventLogger" class="cz.example.loggers.ConsoleEventLogger"/>
 
-    <bean id="app" class="cz.example.application.App">
+    <bean id="app" class="cz.example.App">
         <constructor-arg ref="client"/>
         <constructor-arg ref="eventLogger"/>
+    </bean>
+
+    <bean id="event" class="cz.example.util.Event" scope="prototype">
+        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
+
+    <bean id="fileeventlogger" class="cz.example.loggers.FileEventLogger" init-method="init">
+        <constructor-arg value="init"/>
+    </bean>
+
+    <bean id="cachefileeventlogger" class="cz.example.loggers.CacheFileEventLogger"
+          init-method="init" destroy-method="destroy">
+        <constructor-arg value="destroy"/>
     </bean>
 
 </beans>
